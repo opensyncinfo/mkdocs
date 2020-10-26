@@ -30,4 +30,5 @@ jobs:
         run: |
           mkdocs build -c -s -d build
           touch build/.nojekyll
+          echo "# opensyncinfo.github.io" > build/README.md
           echo "www.opensync.info" > build/CNAME
