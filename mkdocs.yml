@@ -1,0 +1,29 @@
+site_name: Wiki
+
+theme:
+  name: material
+  include_search_page: false
+  search_index_only: true
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      linenums_style: pymdownx.inline
+  - pymdownx.snippets
+  - pymdownx.superfences
