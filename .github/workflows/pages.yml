@@ -38,6 +38,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           external_repository: opensyncinfo/opensyncinfo.github.io
+          publish_branch: main
           personal_token: ${{ secrets.GHPT }}
           keep_files: false
           publish_dir: ./build
