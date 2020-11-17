@@ -45,4 +45,4 @@ jobs:
           channel: "##opensync"
           nickname: "OPENSYNC-BOT"
           message: |-
-            ${{ github.repository }} ((push by ${{ github.actor }}) - ${{ job.status }}
+            ${{ github.repository }} (push by ${{ github.actor }}) - ${{ github_run_number }} ${{ job.status }}
