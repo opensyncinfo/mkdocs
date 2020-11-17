@@ -39,7 +39,7 @@ jobs:
           echo "www.opensync.info" > build/CNAME
 
       - name: IRC push
-        uses: Gottox/irc-message-action@v1
+        uses: Gottox/irc-message-action@v1.1
         if: github.event_name == 'push'
         with:
           channel: "##opensync"
