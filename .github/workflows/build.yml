@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.7]
 
     steps:
       - uses: actions/checkout@v2
@@ -40,9 +40,9 @@ jobs:
 
       - name: IRC push
         uses: rectalogic/notify-irc@v1
-        if: success()
+        if: github.event_name == 'push'
         with:
           channel: "##opensync"
           nickname: "_{^_^}_"
           message: |
-            ${{ github.repository }} - ${{ github.event_name }}
+            ${{ github.repository }} - ${{ github.event_name }} - ${{ github.event.commits.*.message }}
