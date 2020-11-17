@@ -35,3 +35,12 @@ jobs:
           touch build/.nojekyll
           echo "# opensyncinfo.github.io" > build/README.md
           echo "www.opensync.info" > build/CNAME
+
+      - name: IRC push
+        uses: rectalogic/notify-irc@v1
+        if: github.event_name == 'push'
+        with:
+          channel: "##opensync"
+          nickname: "{^_^}"
+          message: |
+            ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
