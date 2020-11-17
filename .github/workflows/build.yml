@@ -43,6 +43,6 @@ jobs:
         if: github.event_name == 'push'
         with:
           channel: "##opensync"
-          nickname: "_{^_^}_"
+          nickname: "OPENSYNC-BOT"
           message: |
             ${{ github.repository }} - ${{ github.event_name }} - ${{ github.event.commits.*.message }}
