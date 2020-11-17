@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -38,9 +40,9 @@ jobs:
 
       - name: IRC push
         uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'push'
+        if: success()
         with:
           channel: "##opensync"
-          nickname: "[{^_^}]"
+          nickname: "_{^_^}_"
           message: |
-            ${{ github.repository }} - ${{ github.event }}
+            ${{ github.repository }} - ${{ github.event_name }}
