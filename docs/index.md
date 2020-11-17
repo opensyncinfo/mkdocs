@@ -13,7 +13,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Test1
 
-Das ist ein Test[^1].
+Das ist ein Test[^1]. Und das hier auch!
 
 ## Test2
 
