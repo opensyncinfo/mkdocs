@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to MkDocs3
 
 ![Placeholder](https://dummyimage.com/150x100/eee/aaa){: align=right }
 
