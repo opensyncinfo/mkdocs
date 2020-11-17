@@ -39,10 +39,10 @@ jobs:
           echo "www.opensync.info" > build/CNAME
 
       - name: IRC push
-        uses: rectalogic/notify-irc@v1
+        uses: Gottox/irc-message-action@v1
         if: github.event_name == 'push'
         with:
           channel: "##opensync"
           nickname: "OPENSYNC-BOT"
-          message: |
+          message: |-
             ${{ github.repository }} (push by ${{ github.actor }}) - ${{ github.event.commits.*.message }}
