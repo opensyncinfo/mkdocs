@@ -36,9 +36,6 @@ jobs:
           echo "# opensyncinfo.github.io" > build/README.md
           echo "www.opensync.info" > build/CNAME
 
-jobs:
-  notification:
-    runs-on: ubuntu-20.04
     steps:
       - name: IRC push
         uses: rectalogic/notify-irc@v1
