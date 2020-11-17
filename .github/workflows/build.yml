@@ -45,4 +45,6 @@ jobs:
           channel: "##opensync"
           nickname: "OPENSYNC-BOT"
           message: |-
+            <--->
             ${{ github.repository }} (${{ github.event_name }}: by ${{ github.actor }}) - ${{ job.status }}
+            <--->
