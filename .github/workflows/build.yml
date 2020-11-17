@@ -40,9 +40,9 @@ jobs:
 
       - name: IRC push
         uses: Gottox/irc-message-action@v1.1
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         with:
           channel: "##opensync"
           nickname: "OPENSYNC-BOT"
           message: |-
-            ${{ github.repository }} (push by ${{ github.actor }}) - ${{ github.event.issue.number }} ${{ github.event.issue.title }}
+            ${{ github.repository }} (# ${{ github.event.issue.number }} ${{ github.actor }}) - ${{ github.event.issue.title }}
